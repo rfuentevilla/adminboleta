@@ -9,21 +9,22 @@ import { ChartsModule } from 'ng2-charts';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { DemoMaterialModule } from '../demo-material-module';
+import { SharedModule } from '../shared/shared.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
-
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { BoletasComponent } from './boletas/boletas.component';
 import { FoliosComponent } from './folios/folios.component';
+
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    PagesComponent,
     BoletasComponent,
-    FoliosComponent
+    FoliosComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,
@@ -39,6 +40,8 @@ import { FoliosComponent } from './folios/folios.component';
   ],
   exports: [
     DashboardComponent,
+    BoletasComponent,
+    FoliosComponent,
     PagesComponent
   ]
 })

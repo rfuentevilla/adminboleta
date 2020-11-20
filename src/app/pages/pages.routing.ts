@@ -1,5 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -7,15 +7,16 @@ import { BoletasComponent } from './boletas/boletas.component';
 import { FoliosComponent } from './folios/folios.component';
 
 
+
 const routes: Routes = [
     {
-        path: '',
+        path: 'dashboard',
         component: PagesComponent,
         children: [
-            { path: 'dashboard', component: DashboardComponent },
+            { path: '', component: DashboardComponent },
             { path: 'boletas', component: BoletasComponent },
-            { path: 'folios', component: FoliosComponent },
-            { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+            { path: 'folios', component: FoliosComponent }
+            // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ]
     }
 

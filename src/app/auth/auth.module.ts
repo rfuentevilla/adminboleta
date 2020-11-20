@@ -5,8 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DemoMaterialModule } from '../demo-material-module';
-import { RouterModule } from '@angular/router';
-import { AuthRoutes } from './auth.routing';
 
 
 
@@ -20,7 +18,9 @@ import { AuthRoutes } from './auth.routing';
     ReactiveFormsModule,
     FlexLayoutModule,
     DemoMaterialModule,
-    RouterModule.forChild(AuthRoutes)
+  ],
+  exports: [
+    LoginComponent
   ]
 })
 export class AuthModule { }
